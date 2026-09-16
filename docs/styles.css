@@ -131,6 +131,7 @@ body {
 }
 
 @keyframes card-out {
+  from { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
   55% { opacity: .64; transform: translateX(-9px) scale(.99); }
   to { opacity: 0; transform: translateX(-38px) scale(.94); filter: blur(1.5px); }
 }
