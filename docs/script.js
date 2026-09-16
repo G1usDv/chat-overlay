@@ -19,6 +19,7 @@ const chatStack = document.querySelector('#chat-stack');
 const connectionState = document.querySelector('#connection-state');
 let socket;
 let reconnectTimer;
+const exitAnimationDuration = 820;
 
 function contrastColor(hex) {
   const normalized = hex.replace('#', '');
@@ -95,7 +96,7 @@ function addMessage({ name, text, color, badges = [] }) {
 function removeCard(card) {
   if (!card || card.classList.contains('is-leaving')) return;
   card.classList.add('is-leaving');
-  window.setTimeout(() => card.remove(), 350);
+  window.setTimeout(() => card.remove(), exitAnimationDuration);
 }
 
 function parseTags(rawTags = '') {

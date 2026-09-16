@@ -44,7 +44,7 @@ body {
 }
 
 .chat-card.is-leaving {
-  animation: card-out .32s ease forwards;
+  animation: card-out .78s cubic-bezier(.22, .61, .36, 1) forwards;
 }
 
 .chat-card__name {
@@ -131,7 +131,8 @@ body {
 }
 
 @keyframes card-out {
-  to { opacity: 0; transform: translateX(-22px) scale(.97); }
+  55% { opacity: .64; transform: translateX(-9px) scale(.99); }
+  to { opacity: 0; transform: translateX(-38px) scale(.94); filter: blur(1.5px); }
 }
 
 @media (max-width: 900px) {
