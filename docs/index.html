@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Overlay de perguntas para o chat da Twitch do Diego Artow." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23110d1d' stroke='%23e942b6' stroke-width='2'/%3E%3Cpath d='M10 9h6.5c5.1 0 8 2.6 8 7s-2.9 7-8 7H10V9Zm4.3 3.8v6.4h1.9c2.4 0 3.9-1.1 3.9-3.2s-1.5-3.2-3.9-3.2h-1.9Z' fill='white'/%3E%3C/svg%3E" />
+    <title>Diegow — chat de espera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="chat-overlay" aria-live="polite" aria-label="Mensagens do chat da Twitch">
+      <div class="chat-stack" id="chat-stack"></div>
+      <div class="connection-state" id="connection-state" hidden></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
