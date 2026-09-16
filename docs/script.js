@@ -84,7 +84,11 @@ function addMessage({ name, text, color, badges = [] }) {
   card.append(nameBar, message);
   chatStack.append(card);
 
-  while (chatStack.children.length > config.maxMessages) removeCard(chatStack.firstElementChild);
+  // Keep the configured amount of visible cards. Cards being animated out still
+  // remain in the DOM briefly, so counting every child here would repeatedly
+  // select the same leaving card and lock the browser source on message five.
+  const visibleCards = [...chatStack.children].filter((item) => !item.classList.contains('is-leaving'));
+  while (visibleCards.length > config.maxMessages) removeCard(visibleCards.shift());
   window.setTimeout(() => removeCard(card), config.messageLifetime);
 }
 
